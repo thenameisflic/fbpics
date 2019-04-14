@@ -48,6 +48,11 @@ app.post('/webhook', (req, res) => {
       // will only ever contain one message, so we get index 0
       let webhook_event = entry.messaging[0];
       console.log(webhook_event);
+
+      /** 
+       * TODO: submit webhook_event.message.attachments[0].payload.url to Firebase
+       * Refer to https://cloud.google.com/storage/docs/uploading-objects#storage-upload-object-code_sample
+       */
     });
 
     // Returns a '200 OK' response to all requests
